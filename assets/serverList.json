@@ -1,1 +1,4 @@
-[{"label":"Demo server","ip":"localhost","port":25565,"motd":"Your demo server<br>Find me in ./assets/serverList.json"},{"label":"Fox server","ip":"fox3000foxy.aternos.me","port":"","motd":"Old Web Mc server<br>Ask your friends"},{"label":"Idley","ip":"free1.idleyhost.com","port":"57172","motd":"Official Web Mc server<br>Ask your friends"}]
+[{"label":"Demo server","ip":"localhost","port":25565,"motd":"Your demo server<br>Find me in ./assets/serverList.json"},
+{"label":"Fox server","ip":"fox3000foxy.aternos.me","port":"","motd":"Old Web Mc server<br>Ask your friends"},
+{"label":"Idley","ip":"free1.idleyhost.com","port":"57172","motd":"Old Web Mc server too<br>Ask your friends"},
+{"label":"Official","ip":"185.228.139.97","port":"25564","motd":"Official Web Mc server<br>Ask your friends"}]
