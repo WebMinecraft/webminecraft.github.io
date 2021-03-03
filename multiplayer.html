@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Web-Minecraft</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/style/button.css">
+    <script src="./assets/jquery.js">
+        console.error("JQuery not found")
+    </script>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/images/dirt.png');
+            background-size: 64px;
+            font-family: Minecraft;
+            color: white;
+            text-shadow: black 2px 2px;
+            text-align: center
+        }
+        
+        #list {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            /* 		position:relative; */
+            /* 		left:-10px; */
+        }
+        
+        .input {
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+            font-family: Minecraft;
+            font-weight: bold;
+            /* 		position:relative; */
+            /* 		left:-10px; */
+        }
+    </style>
+</head>
+
+<body><br>
+    <label>Play Multiplayer</label><br><br>
+    <div id="list">
+    </div>
+    <br><br><label>Other</label><br><br>
+    IP : <input class="input" id="ip"><br><br>
+    Port : <input class="input" id="port"><br><br><br><br>
+    <input type="button" onclick="location.href=baseUrl+'?server='+document.getElementById('ip').value+'&port='+document.getElementById('port').value+'&nick='+localStorage.getItem('username')+'&premium='+localStorage.getItem('premium')" value="Connect !" class="btn">
+    
+</body>
+<script>
+baseUrl = "https://web-minecraft.herokuapp.com/"
+    $(document).ready(function() {
+        $.getJSON("./assets/serverList.json", function(serverList) {
+
+            for (i = 0; i < serverList.length; i++) {
+                document.getElementById("list").innerHTML += `<div class="server" label="${serverList[i].label}" ip="${serverList[i].ip}" port="${serverList[i].port}" motd="${serverList[i].motd}"></div>`
+            }
+            document.getElementById("list").innerHTML += '<br>'
+            server = document.getElementsByClassName("server")
+            for (i = 0; i < server.length; i++) {
+                server[i].innerHTML = `
+  <br>
+  <div>
+  <table style="padding:0 0 0 25%" onclick="location.href=baseUrl+'?server=${serverList[i].ip}&port=${serverList[i].port}&nick=${localStorage.getItem('username')}'+'&premium='+localStorage.getItem('premium')"><tr><td>
+  <img src="./assets/images/server-icon.jpg" width=64 height=64>
+  </td><td></td><td></td><td>
+  <b>${server[i].getAttribute('label')}</b><br>
+  <span>${server[i].getAttribute('motd')}</span><br>
+  <i>${server[i].getAttribute('ip')}:${server[i].getAttribute('port')}</i>
+  </td></table>
+  </div>
+  `
+            }
+        }).fail(function() {
+            console.error("An error has occurred.");
+        });
+    });
+</script>
+
+</html>

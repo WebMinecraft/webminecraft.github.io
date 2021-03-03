@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fonts/mcfont.eot');
+    src: url('../fonts/mcfont.eot?#iefix') format('embedded-opentype'), url('../fonts/mcfont.woff') format('woff'), url('../fonts/mcfont.ttf') format('truetype'), url('../fonts/mcfont.svg#svgFontName') format('svg');
+}
+
+body {
+    background-image: url('../images/menu.gif');
+    background-size: 100% 100%;
+}
+
+h1,
+h3 {
+    font-family: Minecraft;
+}
+
+.button,
+.btn {
+    height: 40px;
+    width: 400px;
+    outline: 2px solid black;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    background-image: url('../images/button_center.png');
+    background-repeat: repeat;
+    padding: 0;
+    font-family: Minecraft;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px #4C4C4C;
+    border-bottom: 4px solid #565656;
+    border-right: 2px solid #565656;
+    border-left: 2px solid #AAA;
+    border-top: 2px solid #AAA;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.half-button {
+    height: 40px;
+    width: 200px;
+    outline: 2px solid black;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    background-image: url('../images/button_center.png');
+    background-repeat: repeat;
+    padding: 0;
+    font-family: Minecraft;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px #4C4C4C;
+    border-bottom: 4px solid #565656;
+    border-right: 2px solid #565656;
+    border-left: 2px solid #AAA;
+    border-top: 2px solid #AAA;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.z75-button {
+    height: 40px;
+    width: 300px;
+    outline: 2px solid black;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    background-image: url('../images/button_center.png');
+    background-repeat: repeat;
+    padding: 0;
+    font-family: Minecraft;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px #4C4C4C;
+    border-bottom: 4px solid #565656;
+    border-right: 2px solid #565656;
+    border-left: 2px solid #AAA;
+    border-top: 2px solid #AAA;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.button span,
+.btn span,
+.half-button span,
+.z75-button span {
+    position: relative;
+    line-height: 40px;
+    bottom: 3px;
+}
+
+.button:hover,
+.btn:hover,
+.half-button:hover,
+.z75-button:hover {
+    border-bottom: 4px solid #59639A;
+    border-right: 2px solid #59639A;
+    border-left: 2px solid #BDC6FF;
+    border-top: 2px solid #BDC6FF;
+    background-image: url('../images/button_active_center.png');
+    color: #FFFFA0;
+}

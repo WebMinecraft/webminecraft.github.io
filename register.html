@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Web-Minecraft</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/style/button.css">
+    <script src="./assets/jquery.js">
+        console.error("JQuery not found")
+    </script>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/images/dirt.png');
+            background-size: 64px;
+            font-family: Minecraft;
+            color: white;
+            text-shadow: black 2px 2px;
+            text-align: center
+        }
+        
+        .input {
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+            font-family: Minecraft;
+            font-weight: bold;
+            /* 		position:relative; */
+            /* 		left:-10px; */
+        }
+    </style>
+</head>
+
+<body><br>
+    <label>Login</label><br><br>
+    <form onsubmit="
+  localStorage.setItem('username',document.login.username.value);
+  localStorage.setItem('premium',document.login.premium.checked);
+  event.preventDefault();
+  location.href='./'
+  " name="login">
+        <label for="username">Username: </label><input class="input" name="username"><br><br>
+        <!--<label for="password">Password: </label><input class="input" name="password" type="password"><br> (Blank if not premium account)-->
+        <br><br>
+        Have premium account ? :<input type="checkbox" name="premium"><br><br>
+        <input type="submit" class="btn" value="Login">
+    </form>
+</body>
+
+</html>

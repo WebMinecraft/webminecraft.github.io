@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Web-Minecraft</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/style/button.css">
+    <script src="./assets/jquery.js">
+        console.error("JQuery not found")
+    </script>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/images/dirt.png');
+            background-size: 64px;
+            font-family: Minecraft;
+            color: white;
+            text-shadow: black 2px 2px;
+            text-align: center
+        }
+        
+        .dark {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/button_center.png');
+            font-family: Minecraft;
+            border: 1px solid black;
+            outline: 1px solid black;
+        }
+        
+        .dark:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/button_center.png');
+            border: 1px solid black;
+        }
+        
+        .input {
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+            font-family: Minecraft;
+            font-weight: bold;
+            /* 		position:relative; */
+            /* 		left:-10px; */
+        }
+        
+        .button,
+        .z75-button {
+            margin: 0 10px
+        }
+    </style>
+</head>
+
+<body><br>
+    <label>Options</label><br><br>
+    <button class="dark z75-button">FOV : Coming soon</button>
+    <button class="z75-button">Realms Notification: OFF</button>
+    <br><br><br><br>
+    <button class="z75-button">Skin Customization...</button>
+    <button class="z75-button">Music & Sounds...</button>
+    <br><br>
+    <button class="z75-button">Video Settings...</button>
+    <button class="z75-button">Controls...</button>
+    <br><br>
+    <button class="z75-button">Language...</button>
+    <button class="z75-button">Chat Settings...</button>
+    <br><br>
+    <button class="z75-button">Resource Packs...</button>
+    <button class="z75-button">Accessibility Settings...</button>
+
+    <br><br><br><br>
+    <button class="button" onclick='location.href="./"'>Done</button>
+</body>
+
+</html>
